@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
 
@@ -36,7 +36,7 @@ public class Main {
             if(month1==month2)
                diferencia+=day2-day1;
             else{
-                diferencia+=cant_de_dias[month1]-day1
+                diferencia+=cant_de_dias[month1]-day1;
                 if(esBisiesto(year1)){
                     cant_de_dias[2]=29;
                     for(int i=month1+1 ; i<=month2 ; i++){
@@ -56,11 +56,11 @@ public class Main {
             desde fecha1 hasta el primero de enero del año siguiente.
             */
             if(esBisiesto(year1))
-                int diferencia=366;
+                diferencia+=366;
             else
-                int diferencia=365;
+                diferencia+=365;
             for(int q=1; q<=month1 ; q++){ //Calculamos cantidad de dias de year1
-                if(q!=month2 ; )           //para lograr que diferencia sea la cantidad
+                if(q!=month2)           //para lograr que diferencia sea la cantidad
                     diferencia-=cant_de_dias[q];
                 else                       //de dias desde fecha1 hasta el prox año nuevo.
                     diferencia-=day1;}
